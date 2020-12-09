@@ -88,3 +88,63 @@ div.fadeIn {
   opacity: 1;
   pointer-events: all;
 }
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotatey(180deg) translatey(0px);
+  }
+  15% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  25% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  35% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  50% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  65% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  75% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  85% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+  100% {
+    transform: rotatey(180deg) translatey(-50px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translatey(0px);
+  }
+  15% {
+    transform: translatey(-50px);
+  }
+  25% {
+    transform: translatey(-50px);
+  }
+  35% {
+    transform: translatey(-50px);
+  }
+  50% {
+    transform: translatey(-50px);
+  }
+  65% {
+    transform: translatey(-50px);
+  }
+  75% {
+    transform: translatey(-50px);
+  }
+  85% {
+    transform: translatey(-50px);
+  }
+  100% {
+    transform: translatey(-50px);
+  }
+}
