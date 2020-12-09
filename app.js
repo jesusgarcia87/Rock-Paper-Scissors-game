@@ -27,12 +27,24 @@ const game = ()=> {
                 const computerNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[computerNumber];
                 // call compare hands
+                compareHands(this.textContent, computerChoice);
+
+                //update images
+                playerHand.src = `./assets/${this.textContent}.png`;
+                computerHand.src = `./assets${computerChoice}.png`;
             });
         }); 
-        
     };
 
-    const comparehands = (playerChoice, computerChoice) =>{
+    const updateScore = () => {
+        const playerScore = document.querySelector.querySelector('.play-score p');
+        const computerScore = document.querySelector.querySelector('.computer-score p');
+        playerScore.textContent = pScore;
+        computerScore.textContent = cScore;
+
+    }
+
+    const compareHands = (playerChoice, computerChoice) =>{
         //update texts
         const winner = document.querySelector('.winner')
         //checking 4 a tie
@@ -44,9 +56,13 @@ const game = ()=> {
         if(playerChoice === 'rock'){
             if(computerChoice === 'scissors') {
                 winner.textContent = 'Player Wins'
+                pScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Computer Wins';
+                cScore++;
+                updateScore();
                 return;
             }
         }
@@ -54,9 +70,13 @@ const game = ()=> {
         if(playerChoice === 'paper'){
             if(computerChoice === 'scissors') {
                 winner.textContent = 'Computer Wins'
+                cScore++; 
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Player Wins';
+                pScore++;
+                updateScore();
                 return;
             }
         }
@@ -64,9 +84,13 @@ const game = ()=> {
         if(playerChoice === 'scissors'){
             if(computerChoice === 'scissors') {
                 winner.textContent = 'Computer Wins'
+                cScore++; 
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Player Wins';
+                pScore++;
+                updateScore();
                 return;
             }
         }
@@ -74,9 +98,13 @@ const game = ()=> {
         if(playerChoice === 'scissors'){
             if(computerChoice === 'rock') {
                 winner.textContent = 'Computer Wins'
+                cScore++; 
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Player Wins';
+                pScore++;
+                updateScore(); 
                 return;
             }
         }
